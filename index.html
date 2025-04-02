@@ -9,6 +9,12 @@
 <body>
     <div class="container">
         <div class="navigation">
+            <div class="collapseMenu" id="collapseMenu">
+                menu
+            </div>
+            <div class="closebtn" id="closebtn">
+                X
+            </div>
             <nav id="navigation-active">
                 <h2 class="logo">NAADi</h2>
                 <ul>
@@ -60,7 +66,7 @@
             <header>
                 <h3>Testimonial</h3>
             </header>
-            <main>
+            <div class="testimonialContainer">
                 <div class="cards">
                     <div class="testiuser"></div>
                     <h4 class="testihead">John</h4>
@@ -79,7 +85,7 @@
                     <p class="testimonialpara">Some text here.</p>
                     <button>View</button>
                 </div>
-            </main>
+            </div>
         </div>
 
         <div class="projects-page" id="projects">
@@ -173,6 +179,21 @@
             <p class="footerpara">copy &copy; 2020</p>
         </div>
     </div>
+
+    <script>
+        // JavaScript code here
+        const collapseMenu = document.getElementById("collapseMenu");
+        const navigationMenu = document.getElementById("navigation-active");
+        const closebtn = document.getElementById("closebtn");
+        collapseMenu.addEventListener('click',function(){
+            navigationMenu.style.top = 0    
+            closebtn.style.top = "10px"
+        })
+        closebtn.addEventListener('click',function(){
+            navigationMenu.style.top = "-1000px"
+            closebtn.style.top = "-1000px"
+        })
+    </script>
 
     <!-- activejs -->
      <!-- <script src="/js/active.js"></script> -->
